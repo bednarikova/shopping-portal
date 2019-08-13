@@ -1,0 +1,35 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.0.M5'
+	id 'java'
+	id 'war'
+	id 'base'
+}
+apply plugin: 'io.spring.dependency-management'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+dependencies {
+	implementation group: 'org.springframework.boot', name:'spring-boot-starter-data-jpa'
+	implementation group: 'org.springframework.boot', name:'spring-boot-starter-web'
+	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.9'
+	compileOnly group: 'org.projectlombok', name: 'lombok'
+
+	runtimeOnly group: 'com.h2database', name:'h2'
+	runtimeOnly group: 'com.microsoft.sqlserver', name:'mssql-jdbc'
+
+	annotationProcessor group: 'org.projectlombok', name: 'lombok'
+
+	providedRuntime group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat'
+
+	testImplementation(group: 'org.springframework.boot', name: 'spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+}
+
+test {
+	useJUnitPlatform()
+}

@@ -1,0 +1,33 @@
+{
+  "extends": ["tslint:recommended", "tslint-react"],
+  "rules": {
+    "max-line-length": false,
+    "no-consecutive-blank-lines": false,
+    "object-literal-sort-keys": false,
+    "no-shadowed-variable": false,
+    "trailing-comma": [
+      true,
+      {
+        "multiline": {
+          "arrays": "always",
+          "objects": "always",
+          "functions": "ignore",
+          "imports": "always",
+          "exports": "always",
+          "typeLiterals": "always"
+        },
+        "singleline": "never"
+      }
+    ],
+    "jsx-no-lambda": [false],
+    "jsx-no-multiline-js":[false],
+    "no-console": [false],
+    "max-classes-per-file": [
+      true,
+      1,
+      "exclude-class-expressions"
+    ],
+    "semicolon": [true, "always", "strict-bound-class-methods"],
+    "member-ordering": false
+  }
+}
