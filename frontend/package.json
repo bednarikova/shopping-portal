@@ -1,7 +1,7 @@
 {
-  "name": "athanasios-frontend",
+  "name": "shopping-project-frontend",
   "version": "0.1.0",
-  "description": "athanasios-frontend",
+  "description": "shopping-project-frontend",
   "private": true,
   "scripts": {
     "start": "webpack-dev-server --open --host 127.0.0.1 --port 8081"
