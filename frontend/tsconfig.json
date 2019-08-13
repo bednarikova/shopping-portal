@@ -20,6 +20,6 @@
     "noErrorTruncation": true
   },
   "include": [
-    "./src/main/js/**/*"
+    "./src/**/*"
   ]
 }

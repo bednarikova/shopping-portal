@@ -1,9 +1,20 @@
 import * as React from "react";
-import {renderComponentWithProvider} from "./containers";
-import {ApplicationContainer} from "./containers/ApplicationContainer";
-import {initStore} from "./redux/store";
+import * as ReactDOM from "react-dom";
+import {Container} from "reactstrap";
+import {LoginForm} from "./components/form/LoginForm";
 
-export const store = initStore();
+// export const store = initStore();
 
-renderComponentWithProvider(<ApplicationContainer containerId={"init"}/>, store);
 
+export class Index extends React.Component {
+
+    public render() {
+        return (
+            <Container>
+                <LoginForm defaultUsername={"Blabla default username"}/>
+            </Container>
+        );
+    }
+}
+
+ReactDOM.render(<Index />, document.getElementById("root"));
